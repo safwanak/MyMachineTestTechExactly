@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.component.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/teal_200">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/pro_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icons8_circled_user96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pro_pic"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:text="Suvojit"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons8_circled_user96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:padding="5dp"
+            android:background="@drawable/bg_carditem">
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icons8_circled_user96"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:text="Connected"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icons8_checkmark"
+                app:layout_constraintStart_toEndOf="@id/status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/connect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/teal_200"
+            app:tabTextColor="@color/white"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorFullWidth="true"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/tab_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

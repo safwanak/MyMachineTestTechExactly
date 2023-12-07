@@ -24,7 +24,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         mainViewModel.getAppsList(378)
 
-
         val viewPager = binding.tabViewpager
         val tabLayout = binding.tabLayout
 

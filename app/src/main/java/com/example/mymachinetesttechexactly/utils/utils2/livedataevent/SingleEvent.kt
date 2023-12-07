@@ -1,4 +1,4 @@
-package com.user.nestmarket.utils.livedataevent
+package com.example.mymachinetesttechexactly.utils.utils2.livedataevent
 
 open class SingleEvent<out T>(private val content: T) {
 
